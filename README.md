@@ -36,11 +36,25 @@ https://polygonscan.com/address/0xf9c53A834F60cBbE40E27702276fBc0819B3aFAD#code
 As a common computation requirement to display decimal prices, the value of `lastRoundData.answer` (for current price calls) and `NewTransmission` event `data.answer` (for historical `getPastLogs` price calls) would have to be divided by the feed/aggregator `decimals` value. See the follwing examples for [current price calls](https://github.com/pascuals/chainlink-price-oracle/blob/main/src/chainlink/chainlink-aggregator-proxy.service.ts#L44) and [historical price calls](https://github.com/pascuals/chainlink-price-oracle/blob/main/src/chainlink/chainlink-aggregator.ts#L40).
 
 ### Links
-- [Price feeds addresses](https://docs.chain.link/data-feeds/price-feeds/addresses)
-- [Readin data feeds offchain](https://docs.chain.link/data-feeds/using-data-feeds#reading-data-feeds-offchain)
-- [USDC/USD data feed status](https://data.chain.link/feeds/ethereum/mainnet/usdc-usd)
-- [Chainlink Polygon USDC/USD Feed](https://polygonscan.com/address/0xf9c53A834F60cBbE40E27702276fBc0819B3aFAD#readContract)
-- [Chainlink Polygon USCD/USD Aggregator](https://polygonscan.com/address/0xf9c53A834F60cBbE40E27702276fBc0819B3aFAD#readContract)
+[Reading data feeds offchain](https://docs.chain.link/data-feeds/using-data-feeds#reading-data-feeds-offchain)
+
+#### Stablecoin links
+- USDC
+    - [Price feed address for USDC](https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon&page=1&categories=low&search=USDC+%2F+USD)
+    - [USDC/USD data feed status](https://data.chain.link/feeds/ethereum/polygon/usdc-usd)
+    - [Chainlink Polygon USDC/USD Feed contract](https://polygonscan.com/address/0xfE4A8cc5b5B2366C1B58Bea3858e81843581b2F7#readContract)
+
+- USDT
+    - [Price feed address for USDT](https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon&page=1&categories=low&search=USDT+%2F+USD)
+    - [USDT/USD data feed status](https://data.chain.link/feeds/polygon/mainnet/usdt-usd)
+    - [Chainlink Polygon USDT/USD Feed contract](https://polygonscan.com/address/0x0A6513e40db6EB1b165753AD52E80663aeA50545#readContract)
+
+- DAI
+    - [Price feed address for DAI](https://docs.chain.link/data-feeds/price-feeds/addresses?network=polygon&page=1&categories=low&search=DAI+%2F+USD)
+    - [DAI/USD data feed status](https://data.chain.link/feeds/polygon/mainnet/dai-usd)
+    - [Chainlink Polygon DAI/USD Feed contract](https://polygonscan.com/address/0x4746DeC9e833A82EC7C2C1356372CcF2cfcD2F3D#readContract)
+
+
 
 ## Usage
 
