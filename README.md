@@ -33,6 +33,8 @@ For historical prices, there are two options (assuming 50 blocks range on `getPa
     1. Price Aggregator ABI could be extracted from the contract verified abi from the specific scanners:\
 https://polygonscan.com/address/0xf9c53A834F60cBbE40E27702276fBc0819B3aFAD#code
 
+As a common computation requirement to display decimal prices, the value of `lastRoundData.answer` (for current price calls) and `NewTransmission` event `data.answer` (for historical `getPastLogs` price calls) would have to be divided by the feed/aggregator `decimals` value. See the follwing examples for [current price calls](https://github.com/pascuals/chainlink-price-oracle/blob/main/src/chainlink/chainlink-aggregator-proxy.service.ts#L44) and [historical price calls](https://github.com/pascuals/chainlink-price-oracle/blob/main/src/chainlink/chainlink-aggregator.ts#L40).
+
 ### Links
 - [Price feeds addresses](https://docs.chain.link/data-feeds/price-feeds/addresses)
 - [Readin data feeds offchain](https://docs.chain.link/data-feeds/using-data-feeds#reading-data-feeds-offchain)
