@@ -24,7 +24,7 @@ https://github.com/pascuals/chainlink-price-oracle/blob/main/src/chainlink/chain
 
 ### Historical prices
 For historical prices, there are two options (assuming 50 blocks range on `getPastLogs` calls):
-1. Backwards compatible to check the prices one by one.
+1. Apply backwards calculations to obtain previous prices one by one.
     1. Following the Chainlink recommendations described here for [Data Feed Historial Rounds](https://docs.chain.link/data-feeds/historical-data#historical-rounds), `roundId` backwards extraction is explained in the following link: [Historical roundId calculation](https://docs.chain.link/data-feeds/historical-data#roundid-in-proxy).
     1. This option is optimal on chains like Ethereum where prices are updated less often (every several minutes for a 0.5% threshold https://etherscan.io/address/0xE62B71cf983019BFf55bC83B48601ce8419650CC), and it will require fewer calls to compute historical price calls.
 1. Obtain the aggregator contract and rely on web3 `getPastLogs` calls to retrieve and decode `NewTransmission` event data.
@@ -80,7 +80,7 @@ Past prices on the last 50 blocks: [
 ```
 
 ## TODO
-- Implmement Solana price feeds
+- Implement Solana price feeds
   - Docs: https://docs.chain.link/data-feeds/solana/using-data-feeds-off-chain
   - Guide: https://docs.chain.link/data-feeds/solana/using-data-feeds-off-chain#adding-data-feeds-to-an-existing-offchain-project
   - Starter kit: https://github.com/smartcontractkit/solana-starter-kit
