@@ -12,7 +12,7 @@ export class ChainlinkAggregator {
     constructor(
         private readonly _chainLinkAggregatorProxyService: ChainlinkAggregatorProxyService,
         private readonly _web3Service: Web3Service,
-        aggregatorAddress: string,
+        aggregatorAddress: string
     ) {
         this._contract = this._web3Service.createContract(AccessControlledOffchainAggregator, aggregatorAddress);
     }
@@ -35,9 +35,6 @@ export class ChainlinkAggregator {
 
         const decimals = await this._chainLinkAggregatorProxyService.getDecimals();
 
-        return parsedLogs.map((result) => [
-            result.block,
-            convertToBigNumber(result.data.answer, decimals).toFixed(),
-        ]);
+        return parsedLogs.map(result => [result.block, convertToBigNumber(result.data.answer, decimals).toFixed()]);
     }
 }

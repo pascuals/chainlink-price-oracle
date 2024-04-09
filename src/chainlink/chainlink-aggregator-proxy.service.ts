@@ -28,7 +28,7 @@ export class ChainlinkAggregatorProxyService {
     async getDescription() {
         if (this._description == null) {
             const description = (await this._web3Service.wrapCall(this._contract.methods.description)) as string;
-            this._description = description.split(`/`).map((part) => part.trim());
+            this._description = description.split(`/`).map(part => part.trim());
         }
 
         return this._description;
