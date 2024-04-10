@@ -17,11 +17,11 @@ export class ChainlinkAggregatorProxyService {
 
     constructor(
         private readonly _web3Service: Web3Service,
-        private readonly _configService: ConfigService
+        private readonly _configService: ConfigService,
     ) {
         this._contract = this._web3Service.createContract(
             EACAggregatorProxy,
-            this._configService.get<string>('CHAINLINK_AGGREGATOR_PROXY_ADDRESS')
+            this._configService.get<string>('CHAINLINK_AGGREGATOR_PROXY_ADDRESS'),
         );
     }
 

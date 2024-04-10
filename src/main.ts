@@ -20,8 +20,8 @@ async function bootstrap() {
     console.log(
         `Past prices on the last ${BLOCK_AGO} blocks:`,
         pastPrices.map(
-            pastPrice => `Block: ${Number(pastPrice[0])}, ${description[0]} price: ${pastPrice[1]} ${description[1]}`
-        )
+            pastPrice => `Block: ${Number(pastPrice[0])}, ${description[0]} price: ${pastPrice[1]} ${description[1]}`,
+        ),
     );
     console.log();
 

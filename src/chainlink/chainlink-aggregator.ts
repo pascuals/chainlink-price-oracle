@@ -12,7 +12,7 @@ export class ChainlinkAggregator {
     constructor(
         private readonly _chainLinkAggregatorProxyService: ChainlinkAggregatorProxyService,
         private readonly _web3Service: Web3Service,
-        aggregatorAddress: string
+        aggregatorAddress: string,
     ) {
         this._contract = this._web3Service.createContract(AccessControlledOffchainAggregator, aggregatorAddress);
     }

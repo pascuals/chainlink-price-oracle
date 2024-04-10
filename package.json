@@ -2,7 +2,7 @@
   "name": "chainlink-price-oracle",
   "version": "0.0.1",
   "description": "Chainlink Oracle consumer",
-  "author": "Nacho G. Pascual <napascual@gmail.com> (https://github.com/pascuals) ",
+  "author": "Nacho G. Pascual <napascual@gmail.com> (https://github.com/pascuals)",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -19,6 +19,7 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.2.1",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
     "bignumber.js": "^9.1.2",
     "ethers": "^6.11.1",
     "joi": "^17.12.3",
